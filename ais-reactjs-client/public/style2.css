@@ -1,0 +1,107 @@
+.select1 {
+    opacity: 0.85;
+    margin: 0 80px;
+    border: 1px solid #7E9BBD;
+    border-radius: 6px;
+    padding: 10px 30px 10px 30px;
+    outline: none;
+    cursor:pointer;
+    width: 79%;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+.select2 {
+    opacity: 0.85;
+    border: 1px solid #7E9BBD;
+    border-radius: 6px;
+    padding: 10px 30px 10px 30px;
+    outline: none;
+    cursor:pointer;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+.button {
+    font-weight: bold;
+    opacity: 0.85;
+    display: inline-block;
+    margin: 20px 80px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: white;
+    background-color: #009879;
+    border: 1px solid #009879;
+    cursor:pointer;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.button:hover {
+    color: white;
+    background-color: #0f6ecd;
+    border-color: #0f6ecd;
+    text-decoration: none;
+}
+
+.content-table {
+    margin-left: 80px;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 1.0em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+
+}
+
+.content-table thead tr {
+    opacity: 0.85;
+    background-color: #009879;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.centerrr {
+    padding-top: 10px;
+    margin: 0 60px;
+    align-items: baseline;
+    display: flex;
+}
+
+.label {
+    margin-left:20px;
+}
+
+.robot-add {
+    margin-right: 70px;
+    align-items: flex-start;
+
+}
+
+body {
+    background-image: url("background.jpg");
+}

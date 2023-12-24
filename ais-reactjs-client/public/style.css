@@ -1,0 +1,66 @@
+body{
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.container{
+    margin: 0px 100px;
+}
+
+.header{
+    background-image: url("background.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-line{
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item{
+    color: grey;
+    text-decoration: none;
+    font-weight: 501;
+    font-size: 22px;
+    margin-right: 70px;
+}
+
+.header-title{
+    padding-top: 40px;
+    color: #726d73;
+    font-weight: 600;
+    margin: 0px 300px;
+    font-size: 55px;
+}
+
+.header-content{
+    padding-top: 20px;
+    color: #726d73;
+    margin: 0px 400px;
+    font-size: 30px;
+}
+
+.header-content-projects{
+    padding-top: 20px;
+    color: #726d73;
+    margin: 0px 150px;
+    font-size: 20px;
+}
+
+.image{
+    padding-top: 10px;
+    margin: 0px 475px;
+    width: 100px;
+}
+
+.header-content-progress{
+    padding-top: 20px;
+    color: #726d73;
+    margin: 0px 400px;
+    font-size: 25px;
+}
+

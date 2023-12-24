@@ -1,0 +1,91 @@
+import React from "react";
+import axios from "axios";
+import { API_URL, CITY_NAMES } from "./constants";
+import { ROBOT_IDs } from "./RobotMonitor";
+
+
+class RobotForm extends React.Component {
+
+  constructor(props) {
+    super(props);
+    // устанавливаем состояние компонента по умолчанию
+    this.state = {statee: '', robotId: this.props.robotId};
+  }
+
+  /**
+   * Обновление данных на сервере (отправка HTTP PUT запроса).
+   * 
+   * Данная функция вызывается при Submit формы.
+   * 
+   * Конструкция updateData = (event) => {...} реализует публичную функцию, которую сразу можно
+   * привязывать к событиям типа onChange, onSubmit и т.д.
+   * 
+   * Подробнее об обработчиках событий в компонентах React см.: https://reactjs.org/docs/handling-events.html
+   * 
+   * @param {*} event 
+   */
+  updateData = (event) => {
+    console.log('PUT Request to: ' + API_URL)
+    // получаем Id населённого пункта из словаря и меняем состояние через встроенный метод класса React.Component setState
+    this.setState({robotId: this.props.robotId})
+	console.log(this.props.robotId)
+    event.preventDefault();   // необходимо, чтобы отключить стандартное поведение формы в браузере (AJAX)
+    // формируем данные для отправки на сервер
+	  //charge: 0,
+	  //position_x: 0,
+	  //position_y: 0,
+    let data = {
+      "id": this.props.robotId,
+	  "charge": 0,
+	  "position_x": 0,
+	  "position_y": 0,
+      "r_state": parseInt(this.state.statee),
+	  "loading_point_id": 0,
+      "unloading_point_id": 0
+    };
+	
+	console.log(data)
+	
+	
+	//"id": 1,
+ // "charge": 0,
+//  "position_x": 0,
+ // "position_y": 0,
+//  "r_state": 2,
+ // "loading_point_id": 0,
+//"unloading_point_id": 0
+	
+	
+    // HTTP-клиент axios автоматически преобразует объект data в json-строку
+    axios.put(API_URL, data, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json;charset=UTF-8",
+      },
+    })
+    .then(response => {
+      console.log('Response: ' + response.status);
+    }, error => {
+        console.log(error);
+        alert(error);
+    });
+  }
+
+  render() {
+    return (
+	
+      <form onSubmit={this.updateData} className="uk-form-stacked">
+	  <h2>1 - энергосберегающий режим<br/> 2 - обычный режим<br/> 3 - ускоренный режим</h2>
+        <div className="uk-margin">
+          <label className="uk-form-label">Режим работы:</label>
+          <input className="uk-input" type="text" onChange={(e) => {this.setState({statee: e.target.value})}} />
+        </div>
+
+        <input type="submit" value="Обновить" className="uk-button uk-button-primary"/>
+      </form>
+    );
+  }
+
+}
+
+export default RobotForm;

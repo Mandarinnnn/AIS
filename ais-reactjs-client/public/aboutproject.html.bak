@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;800&display=swap" rel="stylesheet">
+    <title>Project</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="header-line">
+            <div class="nav">
+                <a class="nav-item" href="@">Работа с БД</a>
+                <a class="nav-item" href="ourprojects.html">Наши проекты</a>
+                <a class="nav-item" href="progress.html">О нас</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-down">
+        <div class="header-title">
+            Описание системы
+        </div>
+        <div class="header-content">
+            Цели создания системы:<br/>
+            1.	Успешное выполнение лабораторных работ<br/>
+            2.	Создание удобной системы для контроля склада с помощью роботов<br/>
+            3.	Мониторинг технического состояния роботов<br/><br/>
+            Функциональные возможности:<br/>
+            1.	Контроль за выполнением задач транспортировки товаров с помощью роботов<br/>
+            2.	Полный контроль технического состояния, статуса и позиции робота.
+
+        </div>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+</body>
+</html>
